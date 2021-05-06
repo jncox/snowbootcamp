@@ -203,7 +203,7 @@ The network in the SNC config is using a /26 network. This splits the network ad
     - 6 Free IPs free for static assignment
 
 Credentials
-+++++++++++
+...........
 
 .. note::
 
