@@ -44,50 +44,45 @@ To let you experience the most fun and interesting parts of the lab, as well as 
 
    .. figure:: images/3.png
 
-######
+
 Agenda
-######
+++++++
 
 - Introductions
 - Lab Setup
 
-#############
 Introductions
-#############
++++++++++++++
 
 - Name
 - Familiarity with Nutanix?
 
-#############
 Initial Setup
-#############
++++++++++++++
 
 - Take note of the *Passwords* being used
 - Log into your virtual desktops (connection info below)
 
-##################
 Cluster assignment
-##################
+++++++++++++++++++
 
-The instructor will tell the attendees their assigned clusters
+The instructor will tell the attendees their assigned UserXX
 
 .. note::
   If these are Single Node Clusters (SNCs) pay close attention to networking. The SNCs are setup and configured differently compared to the three/four node clusters. Details are within the different cluster sections directly below.
 
-###################
 Environment Details
-###################
++++++++++++++++++++
 
 Nutanix Workshops are intended to be run in the Nutanix Hosted POC environment. Your cluster will be provisioned with all necessary images, networks, and VMs required to complete the exercises.
 
-**********
 Networking
-**********
+..........
 
 As both three/four node clusters and single node clusters are available in the HPOC environment, we will outline the details of each separately.
 
 Three/Four node HPOC clusters
-=============================
+-----------------------------
 
 Three or four node Hosted POC clusters follow a standard naming convention:
 
@@ -129,14 +124,14 @@ Each cluster is configured with 2 VLANs which can be used for VMs:
   * - Primary
     - 10.38.\ *XYZ*\ .1/25
     - 0
-    - 10.38.\ *XYZ*\ .50-10.21.\ *XYZ*\ .124
+    - 10.38.\ *XYZ*\ .50-10.38.\ *XYZ*\ .124
   * - Secondary
     - 10.38.\ *XYZ*\ .129/25
     - *XYZ1*
-    - 10.38.\ *XYZ*\ .132-10.21.\ *XYZ*\ .253
+    - 10.38.\ *XYZ*\ .132-10.38.\ *XYZ*\ .253
 
 Single Node HPOC Clusters
-=========================
+-------------------------
 
 For some workshops we are using Single Node Clusters (SNCs). The reason for this is to allow more people to have a dedicated cluster, but still have enough free clusters for the larger workshops, including those for customers.
 
@@ -207,9 +202,8 @@ The network in the SNC config is using a /26 network. This splits the network ad
     - Primary network IPAM
     - 6 Free IPs free for static assignment
 
-***********
 Credentials
-***********
+...........
 
 .. note::
 
@@ -268,15 +262,13 @@ Each cluster has a dedicated domain controller VM, **DC**, responsible for provi
 
 .. _clusterdetails:
 
-###################
 Access Instructions
-###################
++++++++++++++++++++
 
 The Nutanix Hosted POC environment can be accessed a number of different ways:
 
-***************************
 Lab Access User Credentials
-***************************
+...........................
 
 PHX Based Clusters:
 **Username:** PHX-POCxxx-User01 (up to PHX-POCxxx-User20), **Password:** *<Provided by Instructor>*
@@ -284,18 +276,16 @@ PHX Based Clusters:
 RTP Based Clusters:
 **Username:** RTP-POCxxx-User01 (up to RTP-POCxxx-User20), **Password:** *<Provided by Instructor>*
 
-*********
 Frame VDI
-*********
+.........
 
 Login to: https://console.nutanix.com/x/labs
 
 **Nutanix Employees** - Use your **NUTANIXDC** credentials
 **Non-Employees** - Use **Lab Access User** Credentials
 
-*************
 Parallels VDI
-*************
+.................
 
 PHX Based Clusters Login to: https://xld-uswest1.nutanix.com
 
@@ -304,9 +294,8 @@ RTP Based Clusters Login to: https://xld-useast1.nutanix.com
 **Nutanix Employees** - Use your **NUTANIXDC** credentials
 **Non-Employees** - Use **Lab Access User** Credentials
 
-*************************
 Employee Pulse Secure VPN
-*************************
+..........................
 
 Download the client:
 
@@ -332,3 +321,10 @@ For RTP:
 - **Type** - Policy Secure (UAC) or Connection Server
 - **Name** - X-Labs - RTP
 - **Server URL** - xlv-useast1.nutanix.com
+
+
+Nutanix Version Info
+++++++++++++++++++++
+
+- **AOS Version** - 5.18.x | 5.19.x
+- **PC Version** - Prism 2021.3
