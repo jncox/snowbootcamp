@@ -21,37 +21,42 @@ In order for non-infrastructure administrators to access Calm, allowing them to 
 
 #. Specify **USER**\ *##*\ **-Project** (ex. USER01-Project) as your **Project Name**.
 
-#. Under **Users, Groups, and Roles**, click **+ User** and fill out the following:
+#. Click **Create**.
 
-   .. note::
+#. Under **Users, Groups, & Roles**, click **Add Users**.
 
-      If **+ User** is greyed out, refresh Calm. The **NTNXLAB.local** profile is already configured in Prism Central, but this issue has occurred (rarely) in testing.
+   .. figure:: images/24.png
+
+#. Click **+ Add User** and fill out the following fields:
 
    - **Name** - operator\ *##*\ @ntnxlab.local (ex. operator01@ntnxlab.local)
    - **Role** - Operator
-   - Click **Save**
 
-   .. figure:: images/13.png
+   .. figure:: images/25.png
 
-   The purpose of assigning an individual user is simply to limit visibility of other projects in the shared lab environment. In a production environment you would likely be mapping multiple AD Security Groups to specific roles for each project.
+#. Click **Save Users and Project**.
 
-#. Under **Infrastructure**, click **Select Provider > Nutanix**.
+#. Under **Accounts**, click **Add Accounts**.
 
-#. Click **Select Clusters & Subnets**.
+#. Click **Select Account > NTNX_LOCAL_AZ** to configure your Nutanix cluster.
 
-#. Specify your **POC###** cluster and select the **Secondary** network.
+#. Click **Add/Edit Clusters and Subnets**.
 
-   .. figure:: images/14.png
+   .. figure:: images/26.png
+
+#. Select your cluster from the dropdown menu and select your **Secondary** virtual network. Only selected subnets will appear available for assignment to Calm workloads.
+
+   .. figure:: images/27.png
 
 #. Click **Confirm**.
 
-#. Click **Save & Configure Environment**.
-
-   .. figure:: images/15.png
-
    .. note::
 
-      You **DO NOT** need to complete the **Environment** configuration as you will not be using Marketplace Blueprints in the upcoming exercises.
+      If multiple networks are selected, you can select the **Default** network by clicking the :fa:`star`.
+
+#. Leave **Quotas** blank and click **Save Accounts and Project**.
+
+   This will redirect you back to the **Project Overview** page. You do **NOT** need to configure anything under **Environments** to proceed. This additional section is for defining default values used when provisioning Blueprints from the Calm Marketplace.
 
 Uploading A Calm Blueprint
 ++++++++++++++++++++++++++
